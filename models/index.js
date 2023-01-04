@@ -10,28 +10,6 @@ const config = require(__dirname + '/../config/config.js')[env];
 const mysql = require('mysql2');
 const db = {};
 
-const initializeDB = async()=>{
-  // create the connection to database client
-  const connection = await mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USERNAME,
-  password : process.env.DB_PASS,
-});
-
-// query to create Database
-connection.query(
-  `CREATE DATABASE IF NOT EXISTS notes_db;`,
-
-  function(err, results) {
-    console.log(results); 
-    console.log(err);
-  }
-);
-
-}
-
-initializeDB()
-
 
 let sequelize;
 if (config.use_env_variable) {
