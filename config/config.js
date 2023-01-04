@@ -21,7 +21,7 @@ module.exports = {
     "username": process.env.DB_USERNAME,
     "password": process.env.DB_PASS,
     "database": process.env.DB_NAME,
-    "host": process.env.DB_HOST ,
+    "host": process.env.DB_HOST,
     "dialect": process.env.DB_DIALET,
     "port":process.env.DB_PORT
   }
